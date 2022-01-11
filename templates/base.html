@@ -43,8 +43,8 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1>Clean Blog</h1>
-                    <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                    <h1>Thorin &amp; Company</h1>
+                    <span class="subheading">Thorin and his company of dwarves</span>
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2021</div>
+                <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website <span id="copywright"></span></div>
             </div>
         </div>
     </div>
@@ -98,5 +98,9 @@
 <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- Core theme JS-->
 <script src="{{ url_for('static', filename='js/clean-blog.min.js')}}"></script>
+
+<script>
+    $("#copywright").text(new Date().getFullYear());
+</script>
 </body>
 </html>
